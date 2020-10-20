@@ -1,0 +1,71 @@
+﻿Update 7.0
+	Created update logs
+	Removed column "Open"
+	Form1 code changed
+	LogsFinder code changed
+	Logs writing changed
+Update 7.1
+	Added column in logsfinder
+	LogsFinder code changed
+	Lists added button delete
+Update 7.2
+	Added status to confirm event to Form1
+	Added status to confirm event to Lists
+Update 7.3 16.06.2020
+	Removed BlackApps file
+	Color Red changed into blue
+	Added test to BlackApps file
+	Added creation of BlackApps file if it doesn't exist
+	Changed name of BlackApps file to Lists.txt
+	Swaped texbox into combobox in logsfinder
+	Added creating history file
+	Added function combobox click
+	Added function to write history file
+	Added core to Graph
+	Changed LogsFinder to open Graph
+	Changed LogsFinder to draw Graph
+	Add Ico to Graph
+Update 7.4 18.06.2020
+	Fixed last date in Graph
+	Relocated Open time to toolstrip
+	Added functions to change graph
+	Fixed history order
+	Changed max history rows from 10 to 30
+	Buttons on Form1 replaced
+	Button and code Pause deleted
+	toolstrip label Pause removed
+Update 8.0 19.06.2020
+	Added Settings form and base elements
+	Icons updated
+	added function to autorun programm
+	added 3 panels on settings form
+	added function to open settings form
+Update 8.1 21.06.2020
+	Changed date of save to date of start app
+	Changed design of status label on form1
+	Dates to show in LogsFinder Fixed
+Update 8.2 22.06.2020
+	Fixed count of time to find self logs
+Update 8.3 26.06.2020
+	Fixed history writing
+Update 8.4 28.06.2020
+	Changed dates to normal mode
+Update 8.5 04.07.2020
+	Deleted function "WinSum"
+	Fixed time to write in file
+Update 9.0 05.07.2020
+	Added control list
+	Fixed Lists and WinFin to work with control list
+	Added new form Infobox
+	Added functions to show messages
+	InfoBox now banner
+====Plans====
+	delete history button and list to check it
+	form of settings
+	change design and button replacement
+	comment all functions
+	Parents control
+	Progress bar for saving
+	Change color betwen diferent dates
+	Transform window to icon
+	Fix adding in black list

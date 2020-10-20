@@ -1,0 +1,15 @@
+D:\VisualStudioPR\TimerForApps\TimerForApps\bin\Debug\TimerForApps.exe.config
+D:\VisualStudioPR\TimerForApps\TimerForApps\bin\Debug\TimerForApps.exe
+D:\VisualStudioPR\TimerForApps\TimerForApps\bin\Debug\TimerForApps.pdb
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csprojAssemblyReference.cache
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Form1.resources
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Properties.Resources.resources
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csproj.GenerateResource.cache
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csproj.CoreCompileInputs.cache
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.exe
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.pdb
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.LogsFinder.resources
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Lists.resources
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Graph.resources
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Settings.resources
+D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Infobox.resources

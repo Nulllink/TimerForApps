@@ -1,0 +1,107 @@
+25_05_2020 0#06#10==0:0:0==Windows total count 11 TimerForApps 4.1
+#main - Discord< >5:47:20< >Discord< >13:38:29< >
+Oracle SQL Developer< >4:6:30< >sqldeveloper64W< >13:49:29< >
+Почта.txt – Блокнот< >0:5:50< >notepad< >13:50:39< >
+F:\Учеба в вузе\Базы данных\БД2.txt - Notepad++< >1:26:20< >notepad++< >13:50:49< >
+Технический проект.docx - Word< >3:21:0< >WINWORD< >13:51:29< >
+СДО Прометей — Яндекс.Браузер< >8:27:10< >browser< >13:56:39< >
+Ножницы< >1:50:30< >SnippingTool< >14:27:59< >
+данные.xlsx - Excel< >2:24:40< >EXCEL< >15:19:59< >
+Общий (1M ПДП Вельдяйкин А.О.) | Microsoft Teams< >1:24:50< >Teams< >16:07:19< >
+Компаньон консоли Xbox< >3:8:30< >XboxApp< >19:29:47< >
+Фотографии< >7:31:0< >ApplicationFrameHost< >20:14:57< >
+Windows write count: 11
+25_05_2020 23#36#11==0:0:0==Windows total count 13 TimerForApps 4.1
+World of Warcraft< >2:23:0< >Wow< >12:15:50< >
+Ножницы< >0:27:30< >SnippingTool< >12:31:30< >
+#main - Discord< >8:14:30< >Discord< >14:34:50< >
+Фотографии< >1:10:40< >ApplicationFrameHost< >14:37:50< >
+Диспетчер задач< >3:33:20< >Taskmgr< >16:00:50< >
+задание 6.xlsx — Яндекс.Браузер< >13:8:0< >browser< >19:34:10< >
+Windows write count: 6
+26_05_2020 10#25#23==0:0:0==Windows total count 10 TimerForApps 4.1
+Диспетчер задач< >0:21:20< >Taskmgr< >08:56:54< >
+Общий (УП.03 КСК312 1 подгруппа Вельдяйкин А.О.) | Microsoft Teams — Яндекс.Браузер< >1:23:0< >browser< >08:57:54< >
+Steam< >0:33:30< >steam< >09:26:54< >
+@Mango - Discord< >0:11:20< >Discord< >10:14:04< >
+BlackApps.txt – Блокнот< >0:6:0< >notepad< >10:17:14< >
+TimerForApps - Microsoft Visual Studio< >0:7:0< >devenv< >10:18:24< >
+Windows write count: 6
+27_05_2020 1#58#18==0:0:0==Windows total count 16 TimerForApps 4.2
+Условные конструкции | C# — Яндекс.Браузер< >13:28:30< >browser< >10:46:45< >
+1.txt – Блокнот< >0:22:40< >notepad< >10:47:05< >
+World of Warcraft< >3:30:20< >Wow< >10:50:15< >
+Blizzard Battle.net< >8:21:50< >Battle.net< >10:50:15< >
+ESET Internet Security< >0:8:30< >egui< >11:42:55< >
+Wallpaper UI< >0:9:50< >ui32< >11:44:45< >
+Эй, микрочелики! - Discord< >9:28:50< >Discord< >12:18:25< >
+MVR Демонстрация экрана< >0:36:20< >MirapolisScreenSharing< >14:29:06< >
+1М Приложение к приказу ППКРС испр2.docx [Режим ограниченной функциональности] - Word< >0:36:10< >WINWORD< >14:35:36< >
+26.05 Опросный лист эксперта ВСР (3).xlsx - Excel< >0:12:10< >EXCEL< >15:39:06< >
+Ножницы< >0:29:0< >SnippingTool< >16:20:26< >
+TestC++ - Microsoft Visual Studio< >0:18:0< >devenv< >19:58:06< >
+Фотографии< >0:40:0< >ApplicationFrameHost< >21:34:28< >
+Oracle SQL Developer< >3:24:0< >sqldeveloper64W< >22:30:08< >
+Windows write count: 14
+27_05_2020 16#34#24==0:0:0==Windows total count 10 TimerForApps 4.2
+Star Wars The Clone Wars Season 1 Episode 12 – The Gungan General | Watch cartoons online, Watch anime online, English dub anime — Яндекс.Браузер< >7:37:30< >browser< >08:55:47< >
+Blizzard Battle.net< >0:14:30< >Battle.net< >09:04:07< >
+World of Warcraft< >0:14:20< >Wow< >09:04:17< >
+Ножницы< >3:18:20< >SnippingTool< >09:22:07< >
+#main - Discord< >1:52:20< >Discord< >09:41:07< >
+Ссылки.txt – Блокнот< >0:8:20< >notepad< >15:55:47< >
+MVR Демонстрация экрана< >0:9:30< >MirapolisScreenSharing< >16:04:37< >
+Дипломная работа 2021.docx - Word< >0:9:10< >WINWORD< >16:04:57< >
+Windows write count: 8
+28_05_2020 0#54#21==0:0:0==Windows total count 8 TimerForApps 4.2
+Ярославская улица, 4к2 на карте Москвы, ближайшее метро ВДНХ — Яндекс.Карты — Яндекс.Браузер< >5:13:10< >browser< >19:02:42< >
+Для Ткаченко.docx - Word< >1:47:10< >WINWORD< >19:03:22< >
+#main - Discord< >5:12:30< >Discord< >19:04:32< >
+Ножницы< >0:47:50< >SnippingTool< >20:14:02< >
+ConsTestCSharp - Microsoft Visual Studio< >1:6:40< >devenv< >20:38:32< >
+Выбрать Консоль отладки Microsoft Visual Studio< >0:20:20< >VsDebugConsole< >21:05:32< >
+Windows write count: 6
+28_05_2020 15#05#33==0:0:0==Windows total count 3 TimerForApps 4.2
+Star Wars The Clone Wars Season 1 Episode 22 – Hostage Crisis | Watch cartoons online, Watch anime online, English dub anime — Яндекс.Браузер< >6:9:0< >browser< >08:56:18< >
+Doverennost_Mpk.docx [Режим ограниченной функциональности] - Word< >0:43:20< >WINWORD< >08:56:48< >
+#main - Discord< >3:11:0< >Discord< >11:54:38< >
+Windows write count: 3
+29_05_2020 1#21#57==0:0:0==Windows total count 4 TimerForApps 4.2
+TestC++++Form - Microsoft Visual Studio< >0:34:50< >devenv< >22:11:28< >
+Микшер громкости - Динамики (Harper Gaming Headset)< >0:29:40< >SndVol< >00:30:48< >
+Windows write count: 2
+29_05_2020 22#45#53==0:0:0==Windows total count 9 TimerForApps 4.2
+Star Wars: The Clone Wars Season 3 Episode 1 Clone Cadets | Watch cartoons online, Watch anime online, English dub anime — Яндекс.Браузер< >12:16:20< >browser< >08:56:11< >
+#main - Discord< >11:51:0< >Discord< >10:55:03< >
+Forza Horizon 4< >0:19:40< >Forza Horizon 4< >11:24:23< >
+письмо.docx - Word< >5:37:30< >WINWORD< >12:39:43< >
+TestC++++Form - Microsoft Visual Studio< >0:23:20< >devenv< >20:28:53< >
+Form1< >0:7:40< >weight_prog< >20:33:13< >
+ИЛ АИСУ.xlsx - Excel< >0:6:30< >EXCEL< >21:42:33< >
+Ножницы< >0:5:40< >SnippingTool< >22:06:03< >
+Windows write count: 8
+30_05_2020 13#18#08==0:0:0==Windows total count 1 TimerForApps 4.2
+Messages — Яндекс.Браузер< >0:48:30< >browser< >12:14:35< >
+Windows write count: 1
+31_05_2020 2#58#18==0:0:0==Windows total count 8 TimerForApps 4.2
+#main - Discord< >10:14:10< >Discord< >16:42:07< >
+Начало работы.docx - Word< >0:38:0< >WINWORD< >17:04:47< >
+TestC++++Form - Microsoft Visual Studio< >0:13:0< >devenv< >19:22:07< >
+Messages — Яндекс.Браузер< >8:54:0< >browser< >19:44:07< >
+Blizzard Battle.net< >3:12:40< >Battle.net< >21:13:47< >
+Ножницы< >1:6:50< >SnippingTool< >23:56:47< >
+Windows write count: 6
+31_05_2020 17#34#30==1:50:58==Windows total count 4 TimerForApps 4.3
+C# и .NET | Консольный ввод-вывод — Яндекс.Браузер< >1:32:20< >browser< >15:47:31< >
+#main - Discord< >0:40:50< >Discord< >16:53:41< >
+Жалобы.docx - Word< >0:20:50< >WINWORD< >17:11:31< >
+Windows write count: 3
+31_05_2020 23#47#25==6:8:11==Windows total count 10 TimerForApps 4.3
+@Mango - Discord< >4:52:0< >Discord< >17:39:14< >
+Messages — Яндекс.Браузер< >5:43:30< >browser< >17:39:24< >
+Жалобы.docx - Word< >0:8:30< >WINWORD< >17:39:54< >
+9_1.txt – Блокнот< >0:6:0< >notepad< >19:17:34< >
+TestC++ - Microsoft Visual Studio< >0:5:30< >devenv< >19:17:54< >
+Blizzard Battle.net< >0:44:30< >Battle.net< >21:35:24< >
+World of Warcraft< >0:51:50< >Wow< >21:35:54< >
+Windows write count: 7

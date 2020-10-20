@@ -1,0 +1,23 @@
+====WhiteList====
+Forza Horizon 4
+YouTube
+Watch cartoons online
+Twitch
+Messenger
+Notepad++
+‎- Microsoft Edge
+фильм
+LeagueOfGraphs
+Microsoft Teams
+====BlackList====
+Microsoft Edge
+Microsoft Store
+Музыка Groove
+Microsoft Text Input Application
+Параметры
+Core Temp 1.15.1
+ESET Desktop view
+Кино и ТВ
+Будильники и часы
+Калькулятор
+====ControlList====
