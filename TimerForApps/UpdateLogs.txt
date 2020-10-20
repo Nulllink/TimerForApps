@@ -64,7 +64,7 @@ Update 9.0 05.07.2020
 	form of settings
 	change design and button replacement
 	comment all functions
-	Parents control
+	Parents control with time on another apps
 	Progress bar for saving
 	Change color betwen diferent dates
 	Transform window to icon
