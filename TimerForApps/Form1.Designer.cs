@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("hahs,sad");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("hahs,sad");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listView1 = new System.Windows.Forms.ListView();
             this.AppName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,7 +71,7 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.LabelEdit = true;
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(0, 24);
@@ -172,21 +172,21 @@
             // deleteToolStripMenuItem1
             // 
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem1.Text = "Delete";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // killToolStripMenuItem1
             // 
             this.killToolStripMenuItem1.Name = "killToolStripMenuItem1";
-            this.killToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.killToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.killToolStripMenuItem1.Text = "Kill";
             this.killToolStripMenuItem1.Click += new System.EventHandler(this.killToolStripMenuItem_Click);
             // 
             // inBlackListToolStripMenuItem1
             // 
             this.inBlackListToolStripMenuItem1.Name = "inBlackListToolStripMenuItem1";
-            this.inBlackListToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.inBlackListToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.inBlackListToolStripMenuItem1.Text = "In black list";
             this.inBlackListToolStripMenuItem1.Click += new System.EventHandler(this.inBlackListToolStripMenuItem_Click);
             // 
@@ -258,7 +258,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "TimerForApps 9.0";
+            this.Text = "TimerForApps 9.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);

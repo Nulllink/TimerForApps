@@ -390,9 +390,18 @@ namespace TimerForApps
         {
             if (file)
             {
+                StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
+                string oldfile = sr.ReadToEnd();
+                sr.Close();
+                int indexB = oldfile.LastIndexOf("====BlackList====");
+                int indexC = oldfile.LastIndexOf("====ControlList====");
+                StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt", false);
+                string oldfile1 = oldfile.Substring(0, indexC);
+                string oldfile2 = oldfile.Substring(indexC, oldfile.Length - indexC);
+                sw.Write(oldfile1);
                 string name = listView1.FocusedItem.SubItems[0].Text;
-                StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt", true);
                 sw.WriteLine(name);
+                sw.Write(oldfile2);
                 sw.Close();
                 toolStripStatusLabel6.Text = "App added to black list";
             }

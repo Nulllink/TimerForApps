@@ -291,3 +291,12 @@ Notepad++< >2:0:0< >Notepad++< >19:14:22< >
 Микшер громкости - Динамики (Harper Gaming Headset)< >3:5:20< >SndVol< >20:14:02< >
 OO7 - Microsoft Visual Studio< >0:54:40< >devenv< >22:24:42< >
 Windows write count: 12
+20.10.2020 10:03:11==7:40:12==Windows total count 16 TimerForApps 9.0
+TimerForApps - Microsoft Visual Studio< >3:23:20< >devenv< >10:04:11< >
+C:\Users\sasho\Desktop\MaiOOP7-main\OO7\OO7\bin\Debug\OO7.exe< >0:9:40< >OO7< >10:24:21< >
+Главная / Твиттер — Яндекс.Браузер< >1:59:30< >browser< >10:54:41< >
+ТО АИСУ.DOCX - Word< >2:34:0< >WINWORD< >12:01:41< >
+#main - Discord< >3:47:50< >Discord< >13:06:41< >
+YouTube< >1:57:30< >YouTube< >13:09:51< >
+GitHub Desktop< >0:34:0< >GitHubDesktop< >16:42:21< >
+Windows write count: 7

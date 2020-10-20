@@ -59,6 +59,8 @@ Update 9.0 05.07.2020
 	Added new form Infobox
 	Added functions to show messages
 	InfoBox now banner
+Update 9.1 20.10.2020
+	Fixed adding in black list
 ====Plans====
 	delete history button and list to check it
 	form of settings
@@ -68,4 +70,4 @@ Update 9.0 05.07.2020
 	Progress bar for saving
 	Change color betwen diferent dates
 	Transform window to icon
-	Fix adding in black list
+	
