@@ -46,7 +46,7 @@ namespace TimerForApps
             DateTime dt = DateTime.Parse(date);
            
             int x = dt.DayOfYear;
-            chart1.Series[li].Points.AddXY(x,y);
+            chart1.Series[li].Points.AddXY(x,y/60);
             //chart1.Series[li].Points[chart1.Series[li].Points.Count - 1].AxisLabel = "date";
             //chart1.Series[li].AxisLabel.la
             chart1.Series[li].Points[chart1.Series[li].Points.Count - 1].Label = date;
