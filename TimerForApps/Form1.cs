@@ -395,7 +395,6 @@ namespace TimerForApps
                 StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
                 string oldfile = sr.ReadToEnd();
                 sr.Close();
-                int indexB = oldfile.LastIndexOf("====BlackList====");
                 int indexC = oldfile.LastIndexOf("====ControlList====");
                 StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt", false);
                 string oldfile1 = oldfile.Substring(0, indexC);
