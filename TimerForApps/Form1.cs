@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using System.Globalization;
 
 namespace TimerForApps
 {
     //using HWND = IntPtr;
     public partial class Form1 : Form
     {
-        bool file = false;
-        public bool lgopen = false;
-        bool savelogs = true;
-        public bool lisopen = false;
-        public bool setopen = false;
+        private bool _file;
+        public bool Lgopen;
+        private bool _savelogs = true;
+        public bool Lisopen;
+        private bool _setopen;
         public Form1()
         {
             InitializeComponent();
@@ -27,13 +28,13 @@ namespace TimerForApps
             {
                 StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
                 string line = sr.ReadToEnd();
-                if (line.IndexOf("====WhiteList====") >= 0 && line.IndexOf("====BlackList====") >= 0)
+                if (line.IndexOf("====WhiteList====", StringComparison.Ordinal) >= 0 && line.IndexOf("====BlackList====", StringComparison.Ordinal) >= 0)
                 {
-                    file = true;
+                    _file = true;
                 }
                 else
                 {
-                    MessageBox.Show("Lists.txt file is corrapted");
+                    MessageBox.Show(@"Lists.txt file is corrapted");
                 }
                 sr.Close();
             }
@@ -48,13 +49,12 @@ namespace TimerForApps
             }
             timer1.Enabled = true;
             ListAdd2();
-            toolStripStatusLabel2.Text = DateTime.Now.ToString();//.Replace('.', '_');//DateTime.Now.ToLongTimeString();
+            toolStripStatusLabel2.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);//.Replace('.', '_');//DateTime.Now.ToLongTimeString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             ListAdd2();
-            int hours, minutes, seconds;
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 //open
@@ -62,9 +62,9 @@ namespace TimerForApps
                 if (listView1.Items[i].ForeColor == Color.Green)
                 {
                     string[] time = listView1.Items[i].SubItems[1].Text.Split(':');
-                    hours = Convert.ToInt32(time[0]);
-                    minutes = Convert.ToInt32(time[1]);
-                    seconds = Convert.ToInt32(time[2]);
+                    var hours = Convert.ToInt32(time[0]);
+                    var minutes = Convert.ToInt32(time[1]);
+                    var seconds = Convert.ToInt32(time[2]);
                     seconds += 10;
                     if (seconds == 60)
                     {
@@ -76,7 +76,8 @@ namespace TimerForApps
                             hours++;
                         }
                     }
-                    listView1.Items[i].SubItems[1].Text = hours.ToString() + ":" + minutes.ToString() + ":" + seconds.ToString();
+
+                    listView1.Items[i].SubItems[1].Text = hours + @":" + minutes + @":" + seconds;
                 }
             }
         }
@@ -89,7 +90,7 @@ namespace TimerForApps
                 //listView1.Items[i].SubItems[2].Text = "false";
                 listView1.Items[i].ForeColor = Color.Blue;
             }
-            List<ProcessWindow> pw = winproc.Procfind(file);
+            List<ProcessWindow> pw = winproc.Procfind(_file);
             foreach (ProcessWindow text in pw)
             {
                 bool win = false;
@@ -230,7 +231,7 @@ namespace TimerForApps
         #endregion
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (savelogs)
+            if (_savelogs)
             {
                 try
                 {
@@ -243,8 +244,7 @@ namespace TimerForApps
                     int ww = 0;
                     for (int i = 0; i < listView1.Items.Count; i++)
                     {
-                        DateTime time;
-                        time = DateTime.Parse(listView1.Items[i].SubItems[1].Text);
+                        var time = DateTime.Parse(listView1.Items[i].SubItems[1].Text);
                         DateTime time1 = new DateTime(1, 1, 1, 0, 5, 0);
                         //string[] time = listView1.Items[i].SubItems[1].Text.Split(':');
                         if (time1.TimeOfDay <= time.TimeOfDay)
@@ -262,7 +262,7 @@ namespace TimerForApps
                 }
                 catch
                 {
-                    MessageBox.Show("Fail to write in file");
+                    MessageBox.Show(@"Fail to write in file");
                 }
             }
         }
@@ -285,10 +285,10 @@ namespace TimerForApps
 
         private void LogsFinderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!lgopen)
+            if (!Lgopen)
             {
                 LogsFinder lg = new LogsFinder(this);
-                lgopen = true;
+                Lgopen = true;
                 lg.Show();
             }
         }
@@ -332,55 +332,52 @@ namespace TimerForApps
 
         private void killToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            if (listView1.SelectedItems.Count > 0)
+            if (listView1.SelectedItems.Count <= 0) return;
+            var index = listView1.Items.IndexOf(listView1.SelectedItems[0]);
+            var pw = winproc.Procfind(_file);
+            foreach (var t in pw)
             {
-                int index = listView1.Items.IndexOf(listView1.SelectedItems[0]);
-                List<ProcessWindow> pw = winproc.Procfind(file);
-                for (int i = 0; i < pw.Count; i++)
+                if (t.ProcessName == listView1.Items[index].SubItems[2].Text)
                 {
-                    if (pw[i].ProcessName == listView1.Items[index].SubItems[2].Text)
-                    {
-                        pw[i].Process.Kill();
-                        break;
-                    }
+                    t.Process.Kill();
+                    break;
                 }
-                toolStripStatusLabel6.Text = "App killed";
             }
+            toolStripStatusLabel6.Text = @"App killed";
         }
 
         private void saveLogsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (savelogs)
+            if (_savelogs)
             {
-                savelogs = false;
-                toolStripStatusLabel4.Text = "SaveLogs: False";
+                _savelogs = false;
+                toolStripStatusLabel4.Text = @"SaveLogs: False";
             }
             else
             {
-                savelogs = true;
-                toolStripStatusLabel4.Text = "SaveLogs: True";
+                _savelogs = true;
+                toolStripStatusLabel4.Text = @"SaveLogs: True";
             }
         }
 
-        int h=0, m=0, s=0;
+        private int _h, _m, _s;
 
         private void listsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!lisopen)
+            if (!Lisopen)
             {
-                Lists lis = new Lists(file,this);
-                lisopen = true;
+                Lists lis = new Lists(_file,this);
+                Lisopen = true;
                 lis.Show();
             }
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!setopen)
+            if (!_setopen)
             {
                 Settings s = new Settings();
-                setopen = true;
+                _setopen = true;
                 s.Show();
             }
             
@@ -388,14 +385,14 @@ namespace TimerForApps
 
         private void inBlackListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (file)
+            if (_file)
             {
                 string name = listView1.FocusedItem.SubItems[0].Text;
 
                 StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
                 string oldfile = sr.ReadToEnd();
                 sr.Close();
-                int indexC = oldfile.LastIndexOf("====ControlList====");
+                int indexC = oldfile.LastIndexOf("====ControlList====", StringComparison.Ordinal);
                 StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt", false);
                 string oldfile1 = oldfile.Substring(0, indexC);
                 string oldfile2 = oldfile.Substring(indexC, oldfile.Length - indexC);
@@ -404,26 +401,26 @@ namespace TimerForApps
                 sw.Write(oldfile2);
 
                 sw.Close();
-                toolStripStatusLabel6.Text = "App added to black list";
+                toolStripStatusLabel6.Text = @"App added to black list";
             }
             
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            s ++;
-            if (s == 60)
+            _s ++;
+            if (_s == 60)
             {
-                s = 0;
-                m++;
-                if (m == 60)
+                _s = 0;
+                _m++;
+                if (_m == 60)
                 {
-                    m = 0;
-                    h++;
+                    _m = 0;
+                    _h++;
                 }
             }
-            toolStripStatusLabel1.Text = h.ToString() + ":" + m.ToString() + ":" + s.ToString();
-            toolStripStatusLabel5.Text = "Count: " + listView1.Items.Count.ToString();
+            toolStripStatusLabel1.Text = _h.ToString() + @":" + _m.ToString() + @":" + _s.ToString();
+            toolStripStatusLabel5.Text = @"Count: " + listView1.Items.Count.ToString();
 
         }
     } 

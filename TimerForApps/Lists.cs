@@ -82,7 +82,7 @@ namespace TimerForApps
 
         private void Lists_FormClosed(object sender, FormClosedEventArgs e)
         {
-            f.lisopen = false;
+            f.Lisopen = false;
         }
 
         private void writeToolStripMenuItem_Click(object sender, EventArgs e)

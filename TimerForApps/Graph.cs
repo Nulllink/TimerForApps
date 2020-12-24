@@ -19,7 +19,7 @@ namespace TimerForApps
         {
             InitializeComponent();
             lgf = lgf1;
-            lgf.graphop = true;
+            lgf.Graphop = true;
         }
         public void addseries(string series, bool add)
         {
@@ -35,7 +35,7 @@ namespace TimerForApps
             }
             catch
             {
-                MessageBox.Show("This graph already exist");
+                MessageBox.Show(@"This graph already exist");
             }
             
         }
@@ -54,7 +54,7 @@ namespace TimerForApps
 
         private void Graph_FormClosed(object sender, FormClosedEventArgs e)
         {
-            lgf.graphop = false;
+            lgf.Graphop = false;
         }
 
         private void lineToolStripMenuItem_Click(object sender, EventArgs e)
