@@ -49,7 +49,7 @@ namespace TimerForApps
             }
             timer1.Enabled = true;
             ListAdd2();
-            toolStripStatusLabel2.Text = DateTime.Now.ToString(CultureInfo.InvariantCulture);//.Replace('.', '_');//DateTime.Now.ToLongTimeString();
+            toolStripStatusLabel2.Text = DateTime.Now.ToString();//.Replace('.', '_');//DateTime.Now.ToLongTimeString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
