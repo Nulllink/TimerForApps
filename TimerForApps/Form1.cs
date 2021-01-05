@@ -235,7 +235,9 @@ namespace TimerForApps
             {
                 try
                 {
+                    //listView1.Items[0].SubItems[1].Text = "40:40:40";
                     string date = toolStripStatusLabel2.Text; //DateTime.Now.ToString().Replace('.', '_');
+
                     //date = date.Replace(':', '#');
                     string path = AppDomain.CurrentDomain.BaseDirectory + "TimerLogs\\" + date.Substring(3, 7).Replace('.', '_') + ".txt";
                      
@@ -244,10 +246,8 @@ namespace TimerForApps
                     int ww = 0;
                     for (int i = 0; i < listView1.Items.Count; i++)
                     {
-                        var time = DateTime.Parse(listView1.Items[i].SubItems[1].Text);
-                        DateTime time1 = new DateTime(1, 1, 1, 0, 5, 0);
-                        //string[] time = listView1.Items[i].SubItems[1].Text.Split(':');
-                        if (time1.TimeOfDay <= time.TimeOfDay)
+                        var time = listView1.Items[i].SubItems[1].Text.Split(':');
+                        if (int.Parse(time[0])>0 || int.Parse(time[1])>5)
                         {
                             for (int j = 0; j < listView1.Items[0].SubItems.Count; j++)
                             {

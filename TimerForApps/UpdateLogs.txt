@@ -67,6 +67,8 @@ Update 9.3 24.12.2020
     Fixed code by rider
 Update 9.4 27.12.2020
     Fixed date localization
+Update 9.5 05.01.2021
+	Date Time deleted in saving logs
 ====Plans====
 	delete history button and list to check it
 	form of settings
@@ -75,5 +77,3 @@ Update 9.4 27.12.2020
 	Parents control with time on another apps
 	Progress bar for saving
 	Change color between different dates
-	Transform window to icon
-	Fix adding in black list
