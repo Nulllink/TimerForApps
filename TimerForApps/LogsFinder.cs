@@ -70,7 +70,35 @@ namespace TimerForApps
                 var datepf = dateTimePicker2.Value.Year * 100 + dateTimePicker2.Value.Month;
                 if (dateci >= dateps && dateci <= datepf)
                 {
-                    files.Add(item.FullName);
+                    List<string> filestemp = new List<string>();
+                    //Sort by date
+                    bool fileadd = true;
+                    for (int i=0;i<files.Count;i++) {
+                        string datesf = files[i].Substring(files[i].LastIndexOf('\\')+1,7);
+                        DateTime datef = DateTime.ParseExact(datesf, "MM_yyyy", null);
+                        var dateif = datef.Year * 100 + datef.Month;
+                        if (dateci < dateif)
+                        {
+                            filestemp.Add(item.FullName);
+                            fileadd = false;
+                            for (; i < files.Count; i++)
+                            {
+                                filestemp.Add(files[i]);
+                            }
+                            break;
+                        }
+                        filestemp.Add(files[i]);
+                    }
+                    if (files.Count == 0)
+                    {
+                        files.Add(item.FullName); 
+                        continue;
+                    }
+                    if (fileadd)
+                    {
+                        filestemp.Add(item.FullName);
+                    }
+                    files = filestemp;
                 }
 
             }

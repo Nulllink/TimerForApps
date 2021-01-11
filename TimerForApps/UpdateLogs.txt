@@ -69,6 +69,8 @@ Update 9.4 27.12.2020
     Fixed date localization
 Update 9.5 05.01.2021
 	Date Time deleted in saving logs
+Update 9.6 11.01.2021
+    Sorting to logs finder in dates calculations	
 ====Plans====
 	delete history button and list to check it
 	form of settings
