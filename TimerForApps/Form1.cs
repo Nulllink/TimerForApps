@@ -7,40 +7,43 @@ using System.Globalization;
 
 namespace TimerForApps
 {
-    //using HWND = IntPtr;
     public partial class Form1 : Form
     {
+        #region Global params
         private bool _file;
         public bool Lgopen;
         private bool _savelogs = true;
         public bool Lisopen;
         private bool _setopen;
+        #endregion
+        
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-
             listView1.Items.Clear();
+            //Checking file Lists.txt
             try
             {
                 StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
                 string line = sr.ReadToEnd();
+                //if specific lines exist
                 if (line.IndexOf("====WhiteList====", StringComparison.Ordinal) >= 0 && line.IndexOf("====BlackList====", StringComparison.Ordinal) >= 0)
                 {
                     _file = true;
                 }
                 else
                 {
-                    MessageBox.Show(@"Lists.txt file is corrapted");
+                    MessageBox.Show(@"Lists.txt file is corrupted");
                 }
                 sr.Close();
             }
+            //creating file List.txt
             catch
             {
-                //MessageBox.Show("Where is no Lists.txt file in base directory");
                 StreamWriter sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt", false);
                 sw.WriteLine("====WhiteList====");
                 sw.WriteLine("====BlackList====");
@@ -57,8 +60,6 @@ namespace TimerForApps
             ListAdd2();
             for (int i = 0; i < listView1.Items.Count; i++)
             {
-                //open
-                //if (listView1.Items[i].SubItems[2].Text == "true")
                 if (listView1.Items[i].ForeColor == Color.Green)
                 {
                     string[] time = listView1.Items[i].SubItems[1].Text.Split(':');
@@ -77,55 +78,48 @@ namespace TimerForApps
                         }
                     }
 
-                    listView1.Items[i].SubItems[1].Text = hours + @":" + minutes + @":" + seconds;
+                    listView1.Items[i].SubItems[1].Text = $@"{hours}:{minutes}:{seconds}";
                 }
             }
         }
-
+        /// <summary>
+        /// Making green items in list or add new process
+        /// </summary>
         private void ListAdd2()
         {
-            for (int i = 0; i < listView1.Items.Count; i++)
+            //make all items blue
+            for (int i = 0; i < listView1.Items.Count; i++) 
             {
-                //open
-                //listView1.Items[i].SubItems[2].Text = "false";
                 listView1.Items[i].ForeColor = Color.Blue;
             }
-            List<ProcessWindow> pw = winproc.Procfind(_file);
+            List<ProcessWindow> pw = winproc.ProcessFind(_file);
+            //processing list of processes
             foreach (ProcessWindow text in pw)
             {
-                bool win = false;
+                bool win = false;//exist or not exist process
+                //walk throw list view to find already existing process
                 for (int i = 0; i < listView1.Items.Count; i++)
                 {
-
+                    //if process name equivalent
                     if (listView1.Items[i].SubItems[2].Text == text.ProcessName)
                     {
-                        win = true;
-                        //open
-                        //listView1.Items[i].SubItems[2].Text = "true";
-                        listView1.Items[i].ForeColor = Color.Green;
-                        listView1.Items[i].SubItems[0].Text = text.WindowTitle;
+                        win = true;//process exist
+                        listView1.Items[i].ForeColor = Color.Green;//making item green
+                        listView1.Items[i].SubItems[0].Text = text.WindowTitle;//update window name
                     }
-                    //else if (listView1.Items[i].SubItems[0].Text == text.WindowTitle)
-                    //{
-                    //    win = true;
-                    //    listView1.Items[i].SubItems[2].Text = "true";
-                    //    listView1.Items[i].SubItems[3].Text = text.ProcessName;
-                    //}
+                    
                 }
+                //if process don't exist in list
                 if (win == false)
                 {
-                    ListViewItem lvi = new ListViewItem(text.WindowTitle);
-                    lvi.SubItems.Add("0:0:0");
-                    //open
-                    //lvi.SubItems.Add("true");
-                    lvi.ForeColor = Color.Green;
-                    lvi.SubItems.Add(text.ProcessName);
-                    lvi.SubItems.Add(DateTime.Now.TimeOfDay.ToString().Substring(0, 8));
-                    listView1.Items.Add(lvi);
+                    ListViewItem lvi = new ListViewItem(text.WindowTitle); //window name
+                    lvi.SubItems.Add("0:0:0"); //working time
+                    lvi.ForeColor = Color.Green; //color
+                    lvi.SubItems.Add(text.ProcessName); //process name
+                    lvi.SubItems.Add(DateTime.Now.TimeOfDay.ToString().Substring(0, 8)); //open time
+                    listView1.Items.Add(lvi); //adding item
                 }
-
             }
-            //WinSum();
         }
 
         //ListAdd
@@ -334,7 +328,7 @@ namespace TimerForApps
         {
             if (listView1.SelectedItems.Count <= 0) return;
             var index = listView1.Items.IndexOf(listView1.SelectedItems[0]);
-            var pw = winproc.Procfind(_file);
+            var pw = winproc.ProcessFind(_file);
             foreach (var t in pw)
             {
                 if (t.ProcessName == listView1.Items[index].SubItems[2].Text)
@@ -344,6 +338,7 @@ namespace TimerForApps
                 }
             }
             toolStripStatusLabel6.Text = @"App killed";
+            timer3.Start();
         }
 
         private void saveLogsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -402,6 +397,7 @@ namespace TimerForApps
 
                 sw.Close();
                 toolStripStatusLabel6.Text = @"App added to black list";
+                timer3.Start();
             }
             
         }
@@ -419,9 +415,15 @@ namespace TimerForApps
                     _h++;
                 }
             }
-            toolStripStatusLabel1.Text = _h.ToString() + @":" + _m.ToString() + @":" + _s.ToString();
-            toolStripStatusLabel5.Text = @"Count: " + listView1.Items.Count.ToString();
+            toolStripStatusLabel1.Text = $@"{_h}:{_m}:{_s}";
+            toolStripStatusLabel5.Text = $@"Count: {listView1.Items.Count}";
 
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel6.Text = "";
+            timer3.Stop();
         }
     } 
 }

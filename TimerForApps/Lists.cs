@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.Timers;
 
 namespace TimerForApps
 {
@@ -125,7 +126,8 @@ namespace TimerForApps
                     sw.Write(oldfile);
                 }
                 sw.Close();
-                toolStripStatusLabel1.Text = "List updated";
+                toolStripStatusLabel1.Text = @"List updated";
+                timer1.Start();
             }
         }
 
@@ -150,6 +152,12 @@ namespace TimerForApps
                 listView1.Items[c - 1].SubItems[0].Text = listView1.Items[c].SubItems[0].Text;
             }
             listView1.Items.RemoveAt(listView1.Items.Count - 1);
+        }
+
+        private void timer1_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            toolStripStatusLabel1.Text = @"";
+            timer1.Stop();
         }
     }
 }

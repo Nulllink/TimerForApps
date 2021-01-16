@@ -23,8 +23,8 @@
         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -32,10 +32,10 @@
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("hahs,sad");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listView1 = new System.Windows.Forms.ListView();
-            this.AppName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AppName = new System.Windows.Forms.ColumnHeader();
+            this.Time = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,29 +55,25 @@
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.AppName,
-            this.Time,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.AppName, this.Time, this.columnHeader2, this.columnHeader3});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {listViewItem1});
             this.listView1.LabelEdit = true;
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(0, 28);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(615, 575);
+            this.listView1.Size = new System.Drawing.Size(615, 576);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -113,17 +109,14 @@
             // 
             this.notifyIcon1.BalloonTipText = "Double click to open window";
             this.notifyIcon1.BalloonTipTitle = "Timer for apps";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Icon = ((System.Drawing.Icon) (resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "TimerForApps";
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.processToolStripMenuItem,
-            this.saveLogsToolStripMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.openToolStripMenuItem, this.processToolStripMenuItem, this.saveLogsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(615, 28);
@@ -132,86 +125,75 @@
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logsFinderToolStripMenuItem1,
-            this.listsToolStripMenuItem1,
-            this.settingsToolStripMenuItem});
+            this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.logsFinderToolStripMenuItem1, this.listsToolStripMenuItem1, this.settingsToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // logsFinderToolStripMenuItem1
             // 
             this.logsFinderToolStripMenuItem1.Name = "logsFinderToolStripMenuItem1";
-            this.logsFinderToolStripMenuItem1.Size = new System.Drawing.Size(220, 26);
+            this.logsFinderToolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
             this.logsFinderToolStripMenuItem1.Text = "Logs Finder";
             this.logsFinderToolStripMenuItem1.Click += new System.EventHandler(this.LogsFinderToolStripMenuItem_Click);
             // 
             // listsToolStripMenuItem1
             // 
             this.listsToolStripMenuItem1.Name = "listsToolStripMenuItem1";
-            this.listsToolStripMenuItem1.Size = new System.Drawing.Size(220, 26);
+            this.listsToolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
             this.listsToolStripMenuItem1.Text = "Lists";
             this.listsToolStripMenuItem1.Click += new System.EventHandler(this.listsToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.settingsToolStripMenuItem.Text = "Settings Info About";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // processToolStripMenuItem
             // 
-            this.processToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteToolStripMenuItem1,
-            this.killToolStripMenuItem1,
-            this.inBlackListToolStripMenuItem1});
+            this.processToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.deleteToolStripMenuItem1, this.killToolStripMenuItem1, this.inBlackListToolStripMenuItem1});
             this.processToolStripMenuItem.Name = "processToolStripMenuItem";
-            this.processToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.processToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.processToolStripMenuItem.Text = "Process";
             // 
             // deleteToolStripMenuItem1
             // 
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(166, 26);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.deleteToolStripMenuItem1.Text = "Delete";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // killToolStripMenuItem1
             // 
             this.killToolStripMenuItem1.Name = "killToolStripMenuItem1";
-            this.killToolStripMenuItem1.Size = new System.Drawing.Size(166, 26);
+            this.killToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.killToolStripMenuItem1.Text = "Kill";
             this.killToolStripMenuItem1.Click += new System.EventHandler(this.killToolStripMenuItem_Click);
             // 
             // inBlackListToolStripMenuItem1
             // 
             this.inBlackListToolStripMenuItem1.Name = "inBlackListToolStripMenuItem1";
-            this.inBlackListToolStripMenuItem1.Size = new System.Drawing.Size(166, 26);
+            this.inBlackListToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
             this.inBlackListToolStripMenuItem1.Text = "In black list";
             this.inBlackListToolStripMenuItem1.Click += new System.EventHandler(this.inBlackListToolStripMenuItem_Click);
             // 
             // saveLogsToolStripMenuItem
             // 
             this.saveLogsToolStripMenuItem.Name = "saveLogsToolStripMenuItem";
-            this.saveLogsToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.saveLogsToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.saveLogsToolStripMenuItem.Text = "SaveLogs";
             this.saveLogsToolStripMenuItem.Click += new System.EventHandler(this.saveLogsToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel4,
-            this.toolStripStatusLabel5,
-            this.toolStripStatusLabel6});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 603);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripStatusLabel2, this.toolStripStatusLabel1, this.toolStripStatusLabel4, this.toolStripStatusLabel5, this.toolStripStatusLabel6});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 604);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(615, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(615, 25);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -251,6 +233,11 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // timer3
+            // 
+            this.timer3.Interval = 5000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,11 +246,11 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "TimerForApps 9.6";
+            this.Text = "TimerForApps 9.7";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -273,7 +260,6 @@
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -290,6 +276,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;

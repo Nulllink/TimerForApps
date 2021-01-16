@@ -72,56 +72,60 @@ namespace TimerForApps
         {
             infopen = false;
         }
-        public static List<ProcessWindow> Procfind(bool file)
+        /// <summary>
+        /// Make list of working process without black listed processes
+        /// </summary>
+        /// <param name="file">file exist or not</param>
+        /// <returns>list of working process</returns>
+        public static List<ProcessWindow> ProcessFind(bool file)
         {
-            //Process[] lis =  Process.GetProcesses();
-            ProcessWindow[] applications = ProcessHelper.GetRunningApplications();
-            List<ProcessWindow> whiteapp = new List<ProcessWindow>();
-
-            for (int i = 0; i < applications.Length; i++)
+            ProcessWindow[] applications = ProcessHelper.GetRunningApplications();//make list of running applications
+            List<ProcessWindow> goodApps = new List<ProcessWindow>();//list of good apps
+            //walk throw applications to find good apps
+            foreach (var application in applications)
             {
-                bool black = false;
-                //bool white = true;
-                int listc = 0;
+                bool black = false; //process in black list or not
+                int whichList = 0; //in which list lays current app
+                //if file exist
                 if (file == true)
                 {
                     StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        if (listc == 0)
+                        if (whichList == 0)
                         {
                             if (line == "====BlackList====")
                             {
                                 //white = false;
-                                listc = 1;
+                                whichList = 1;
                             }
                             else
                             {
-                                int ind = applications[i].WindowTitle.IndexOf(line);
+                                int ind = application.WindowTitle.IndexOf(line);
                                 if (ind > -1)
                                 {
-                                    applications[i].ProcessName = line.Replace(" ", "");
-                                    applications[i].WindowTitle = line;
+                                    application.ProcessName = line.Replace(" ", "");
+                                    application.WindowTitle = line;
                                 }
                             }
                         }
-                        else if (listc == 1)
+                        else if (whichList == 1)
                         {
                             if (line == "====ControlList====")
                             {
                                 //white = false;
-                                listc = 2;
+                                whichList = 2;
                             }
-                            if (line == applications[i].WindowTitle)
+                            if (line == application.WindowTitle)
                             {
                                 black = true;
                                 break;
                             }
                         }
-                        else if (listc == 2)
+                        else if (whichList == 2)
                         {
-                            if (line == applications[i].WindowTitle)
+                            if (line == application.WindowTitle)
                             {
                                 //MessageBox.Show("Are you shure about this?");
                                 if (!infopen)
@@ -140,10 +144,10 @@ namespace TimerForApps
                 }
                 if (black == false || file == false)
                 {
-                    whiteapp.Add(applications[i]);
+                    goodApps.Add(application);
                 }
             }
-            return whiteapp;
+            return goodApps;
         }
     }
 
