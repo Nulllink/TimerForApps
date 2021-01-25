@@ -53,7 +53,6 @@ namespace TimerForApps
             List<string> files = new List<string>();
             string path = AppDomain.CurrentDomain.BaseDirectory + "TimerLogs";
             string name = comboBox1.Text.Replace(" ", "").ToLower();
-            bool iffind = false;
             int allhours = 0;
             int allminutes = 0;
             DirectoryInfo dir = new DirectoryInfo(path);
@@ -137,15 +136,6 @@ namespace TimerForApps
                                 lvi.SubItems.Add(date);
                                 lvi.SubItems.Add(spline[2]);
                                 listView1.Items.Add(lvi);
-                                //if (date != dateo)
-                                //{
-                                //    dateo = date;
-                                //    if (blu)
-                                //    {
-                                //        listView1.Items[listView1.Items.Count - 1].ForeColor = Color.Blue;
-                                //    }
-                                //}
-                                iffind = true;
                             }
 
                         }
@@ -175,14 +165,18 @@ namespace TimerForApps
                             lvi.SubItems.Add(minutes.ToString());
                             lvi.SubItems.Add(date);
                             listView1.Items.Add(lvi);
-                            iffind = true;
                         }
                     }
                 }
                 sr.Close();
             }
-            if (iffind)
+
+            int[] openTime = FindMainForm(name,allhours,allminutes);
+            allhours = openTime[0];
+            allminutes = openTime[1];
+            if (allhours > 0 && allminutes > 0)
             {
+                
                 toolStripStatusLabel1.Text = $@"Open Time: {allhours}h {allminutes}m";
                 Historywrite();
                 //ListViewItem lvi = new ListViewItem("OpenTime");
@@ -191,6 +185,74 @@ namespace TimerForApps
                 //listView1.Items.Add(lvi);
             }
         }
+
+        private int[] FindMainForm(string name,int allhours,int allminutes)
+        {
+            int[] opentime = new int[2] {0,0};
+            if (name != "self")
+            {
+                var control = _f1P.Controls.Find("listView1", true)[0] as ListView;
+                var items = control.Items;
+                var spline = new string[4];
+                foreach (ListViewItem listViewItem in items)
+                {
+                    for (int i = 0; i < listViewItem.SubItems.Count; i++)
+                    {
+                        spline[i] = listViewItem.SubItems[i].Text;
+                    }
+                    if (Branch(name, spline))
+                    {
+                        var trname = spline[0];
+                        string[] splittime = spline[1].Split(':');
+                        var hours = Convert.ToInt32(splittime[0]);
+                        var minutes = Convert.ToInt32(splittime[1]);
+                        allhours += hours;
+                        allminutes += minutes;
+                        if (allminutes >= 60)
+                        {
+                            allminutes -= 60;
+                            allhours++;
+                        }
+
+                        var c = _f1P.Controls[1] as StatusStrip;
+                        var control2 = c.Items[0];
+                        ListViewItem lvi = new ListViewItem(trname);
+                        lvi.SubItems.Add(hours.ToString());
+                        lvi.SubItems.Add(minutes.ToString());
+                        lvi.SubItems.Add(control2.Text.Substring(0, 10));
+                        lvi.SubItems.Add(spline[2]);
+                        listView1.Items.Add(lvi);
+                    }
+                }
+            }
+            else
+            {
+                var c = _f1P.Controls[1] as StatusStrip;
+                var control = c.Items[1];
+                string[] sptime = control.Text.Split(':');
+                var hours = Convert.ToInt32(sptime[0]);
+                var minutes = Convert.ToInt32(sptime[1]);
+                allhours += hours;
+                allminutes += minutes;
+                if (allminutes >= 60)
+                {
+                    allminutes -= 60;
+                    allhours++;
+                }
+
+                c = _f1P.Controls[1] as StatusStrip;
+                control = c.Items[0];
+                ListViewItem lvi = new ListViewItem("Self");
+                lvi.SubItems.Add(hours.ToString());
+                lvi.SubItems.Add(minutes.ToString());
+                lvi.SubItems.Add(control.Text);
+                listView1.Items.Add(lvi);
+            }
+
+            opentime[0] = allhours;
+            opentime[1] = allminutes;
+            return opentime;
+        } 
 
         private void findProcessToolStripMenuItem_Click(object sender, EventArgs e)
         {
