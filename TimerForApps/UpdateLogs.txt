@@ -74,6 +74,8 @@ Update 9.6 11.01.2021
 Update 9.7 15.01.2021
     Added timer to delete status string after 5 seconds
 	Commented part of the code
+Update 9.8 25.01.2021
+	Logs finder now works with current logs
 ====Plans====
 	delete history button and list to check it
 	form of settings
@@ -82,4 +84,4 @@ Update 9.7 15.01.2021
 	Parents control with time on another apps
 	Progress bar for saving
 	Change color between different dates
-	Logs finder works with current logs
+	
