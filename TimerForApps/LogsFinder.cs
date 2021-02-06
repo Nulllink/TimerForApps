@@ -174,7 +174,7 @@ namespace TimerForApps
             int[] openTime = FindMainForm(name,allhours,allminutes);
             allhours = openTime[0];
             allminutes = openTime[1];
-            if (allhours > 0 && allminutes > 0)
+            if (allhours > 0 || allminutes > 0)
             {
                 
                 toolStripStatusLabel1.Text = $@"Open Time: {allhours}h {allminutes}m";

@@ -76,6 +76,8 @@ Update 9.7 15.01.2021
 	Commented part of the code
 Update 9.8 25.01.2021
 	Logs finder now works with current logs
+Update 9.9 06.02.2021
+	Fixed bug with 0 minutes in logs finder
 ====Plans====
 	delete history button and list to check it
 	form of settings
@@ -84,4 +86,5 @@ Update 9.8 25.01.2021
 	Parents control with time on another apps
 	Progress bar for saving
 	Change color between different dates
+	Save logs without reboot of computer
 	
