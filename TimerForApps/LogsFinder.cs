@@ -260,6 +260,12 @@ namespace TimerForApps
             Find();
         }
 
+        public void findProcess()
+        {
+            _rowname = 2;
+            Find();
+        }
+
         private void comboBox1_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();

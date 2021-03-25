@@ -15,8 +15,9 @@ namespace TimerForApps
         private bool _savelogs = true;
         public bool Lisopen;
         private bool _setopen;
+        private LogsFinder lg;
         #endregion
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -281,7 +282,7 @@ namespace TimerForApps
         {
             if (!Lgopen)
             {
-                LogsFinder lg = new LogsFinder(this);
+                lg = new LogsFinder(this);
                 Lgopen = true;
                 lg.Show();
             }
@@ -400,6 +401,19 @@ namespace TimerForApps
                 timer3.Start();
             }
             
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!Lgopen)
+            {
+                lg = new LogsFinder(this);
+                Lgopen = true;
+                lg.Show();
+            }
+
+            lg.Controls["comboBox1"].Text = listView1.FocusedItem.SubItems[2].Text;
+            lg.findProcess();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
