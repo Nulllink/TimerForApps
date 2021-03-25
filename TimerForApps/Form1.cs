@@ -416,6 +416,13 @@ namespace TimerForApps
             lg.findProcess();
         }
 
+        
+
+        private void notifyIcon1_BalloonTipShown(object sender, MouseEventArgs e)
+        {
+            notifyIcon1.Text = toolStripStatusLabel5.Text;
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             _s ++;

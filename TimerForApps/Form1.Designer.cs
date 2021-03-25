@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("hahs,sad");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("hahs,sad");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listView1 = new System.Windows.Forms.ListView();
             this.AppName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -72,7 +72,7 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.LabelEdit = true;
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(0, 28);
@@ -113,11 +113,11 @@
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.BalloonTipText = "Double click to open window";
-            this.notifyIcon1.BalloonTipTitle = "Timer for apps";
+            this.notifyIcon1.BalloonTipTitle = "Opened";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "TimerForApps";
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_DoubleClick);
+            this.notifyIcon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_BalloonTipShown);
             // 
             // menuStrip1
             // 
