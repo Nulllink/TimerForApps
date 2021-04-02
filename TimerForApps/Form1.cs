@@ -424,7 +424,7 @@ namespace TimerForApps
 
         private void notifyIcon1_BalloonTipShown(object sender, MouseEventArgs e)
         {
-            notifyIcon1.Text = toolStripStatusLabel5.Text;
+            notifyIcon1.Text = toolStripStatusLabel1.Text;
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
