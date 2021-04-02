@@ -79,8 +79,10 @@ Update 9.8 25.01.2021
 Update 9.9 06.02.2021
 	Fixed bug with 0 minutes in logs finder
 Update 10.0 25.03.2021
-	Added open Logs finder on clicl to List View on Form 1
+	Added open Logs finder on click to List View on Form 1
 	Added text to notify icon
+Update 10.1 02.04.2021
+	Added new button and tool strip label for search by clicking in list view
 ====Plans====
 	delete history button and list to check it
 	form of settings

@@ -16,6 +16,7 @@ namespace TimerForApps
         public bool Lisopen;
         private bool _setopen;
         private LogsFinder lg;
+        private bool _search = false;
         #endregion
 
         public Form1()
@@ -405,15 +406,18 @@ namespace TimerForApps
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Lgopen)
+            if (_search)
             {
-                lg = new LogsFinder(this);
-                Lgopen = true;
-                lg.Show();
-            }
+                if (!Lgopen)
+                {
+                    lg = new LogsFinder(this);
+                    Lgopen = true;
+                    lg.Show();
+                }
 
-            lg.Controls["comboBox1"].Text = listView1.FocusedItem.SubItems[2].Text;
-            lg.findProcess();
+                lg.Controls["comboBox1"].Text = listView1.FocusedItem.SubItems[2].Text;
+                lg.findProcess();
+            }
         }
 
         
@@ -421,6 +425,20 @@ namespace TimerForApps
         private void notifyIcon1_BalloonTipShown(object sender, MouseEventArgs e)
         {
             notifyIcon1.Text = toolStripStatusLabel5.Text;
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_search)
+            {
+                _search = false;
+                toolStripStatusLabel3.Text = @"Search: False";
+            }
+            else
+            {
+                _search = true;
+                toolStripStatusLabel3.Text = @"Search: True";
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
