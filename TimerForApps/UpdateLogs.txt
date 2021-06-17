@@ -84,13 +84,14 @@ Update 10.0 25.03.2021
 Update 10.1 02.04.2021
 	Added new button and tool strip label for search by clicking in list view
 	Changed from count of windows to run time of app itself
+Update 10.2 17.06.2021
+    Added Progress bar for saving
 ====Plans====
 	delete history button and list to check it
 	form of settings
 	change design and button replacement
 	comment all functions
 	Parents control with time on another apps
-	Progress bar for saving
 	Change color between different dates
 	Save logs without reboot of computer
 	

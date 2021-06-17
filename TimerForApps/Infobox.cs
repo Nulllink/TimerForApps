@@ -22,6 +22,17 @@ namespace TimerForApps
             label1.Text = text;
         }
 
+        public void bar_settings(int max_points)
+        {
+            progressBar1.Show();
+            progressBar1.Maximum = max_points;
+        }
+        
+        public void plus_bar(int points)
+        {
+            progressBar1.Value += points;
+        }
+
         private void Infobox_FormClosed(object sender, FormClosedEventArgs e)
         {
             winproc.infoclose();

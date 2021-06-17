@@ -229,6 +229,10 @@ namespace TimerForApps
         {
             if (_savelogs)
             {
+                Infobox ibform = new Infobox();
+                ibform.bar_settings(listView1.Items.Count);
+                ibform.write("Saving");
+                ibform.Show();
                 try
                 {
                     //listView1.Items[0].SubItems[1].Text = "40:40:40";
@@ -252,6 +256,7 @@ namespace TimerForApps
                             sw.WriteLine();
                             ww++;
                         }
+                        ibform.plus_bar(1);
                     }
                     sw.WriteLine("Windows write count: " + ww.ToString());
                     sw.Close();
@@ -260,6 +265,7 @@ namespace TimerForApps
                 {
                     MessageBox.Show(@"Fail to write in file");
                 }
+                ibform.Close();
             }
         }
 
