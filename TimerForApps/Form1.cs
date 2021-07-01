@@ -26,6 +26,11 @@ namespace TimerForApps
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            Starting();
+        }
+
+        private void Starting()
+        {
             listView1.Items.Clear();
             //Checking file Lists.txt
             try
@@ -226,6 +231,11 @@ namespace TimerForApps
         //}
         #endregion
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Saving();
+        }
+
+        private void Saving()
         {
             if (_savelogs)
             {
@@ -449,6 +459,13 @@ namespace TimerForApps
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            if (DateTime.Today > DateTime.Parse(toolStripStatusLabel2.Text))
+            {
+                Saving();
+                Starting();
+                toolStripStatusLabel6.Text = @"New day";
+                timer3.Start();
+            }
             _s ++;
             if (_s == 60)
             {
