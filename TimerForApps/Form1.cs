@@ -32,6 +32,9 @@ namespace TimerForApps
         private void Starting()
         {
             listView1.Items.Clear();
+            _s = 0;
+            _m = 0;
+            _h = 0;
             //Checking file Lists.txt
             try
             {

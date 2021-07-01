@@ -23,10 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0e9ae5c-1bc8-4c59-a972-0ca543435a52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TimerForApps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TimerForApps/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimerForApps/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.pdb" afterDir="false" />
     </list>
@@ -108,6 +105,7 @@
       <workItem from="1623916734634" duration="1722000" />
       <workItem from="1625162125110" duration="443000" />
       <workItem from="1625162586283" duration="695000" />
+      <workItem from="1625173248759" duration="142000" />
     </task>
     <servers />
   </component>
