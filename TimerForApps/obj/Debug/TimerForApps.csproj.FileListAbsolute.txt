@@ -16,7 +16,6 @@ D:\VisualStudioPR\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Infobox.resou
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\bin\Debug\TimerForApps.exe.config
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\bin\Debug\TimerForApps.exe
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\bin\Debug\TimerForApps.pdb
-C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csprojAssemblyReference.cache
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Graph.resources
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Infobox.resources
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.Lists.resources
@@ -28,3 +27,4 @@ C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csproj.Ge
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csproj.CoreCompileInputs.cache
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.exe
 C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.pdb
+C:\!Disk\VisualStudio\TimerForApps\TimerForApps\obj\Debug\TimerForApps.csproj.AssemblyReference.cache

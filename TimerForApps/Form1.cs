@@ -14,9 +14,10 @@ namespace TimerForApps
         public bool Lgopen;
         private bool _savelogs = true;
         public bool Lisopen;
-        private bool _setopen;
         private LogsFinder lg;
         private bool _search = false;
+        Settings fSettings = new Settings();
+        List<bool> sBools;
         #endregion
 
         public Form1()
@@ -27,6 +28,7 @@ namespace TimerForApps
         private void Form1_Load(object sender, EventArgs e)
         {
             Starting();
+            sBools = fSettings.Check_boxes_states();
         }
 
         private void Starting()
@@ -390,13 +392,7 @@ namespace TimerForApps
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!_setopen)
-            {
-                Settings s = new Settings();
-                _setopen = true;
-                s.Show();
-            }
-            
+            fSettings.Show();
         }
 
         private void inBlackListToolStripMenuItem_Click(object sender, EventArgs e)
@@ -462,7 +458,8 @@ namespace TimerForApps
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (DateTime.Today > DateTime.Parse(toolStripStatusLabel2.Text))
+            
+            if (DateTime.Today > DateTime.Parse(toolStripStatusLabel2.Text) && sBools[0])
             {
                 Saving();
                 Starting();
