@@ -92,6 +92,9 @@ Update 11.1 10.07.2021
     Added check box for auto start new day in settings form
 Update 11.2 10.07.2021
     Added functional for continue already started day
+Update 11.3 11.07.2021
+    Fixed length of check box 3
+    Fixed backup logs in zero timing
 ====Plans====
 	delete history button and list to check it
 	form of settings

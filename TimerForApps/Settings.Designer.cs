@@ -119,7 +119,7 @@
             // 
             this.checkBox3.Location = new System.Drawing.Point(16, 96);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(199, 24);
+            this.checkBox3.Size = new System.Drawing.Size(370, 24);
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Continue counting in 1 day";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             // 
             this.checkBox2.Location = new System.Drawing.Point(16, 55);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(157, 24);
+            this.checkBox2.Size = new System.Drawing.Size(370, 24);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "Auto start new day";
             this.checkBox2.UseVisualStyleBackColor = true;

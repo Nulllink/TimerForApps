@@ -90,7 +90,7 @@ namespace TimerForApps
                     string[] current = lines[i].Split(new[] {"=="}, StringSplitOptions.None);
                     if (current.Length == 3)
                     {
-                        if (DateTime.Parse(current[0]) > DateTime.Today)
+                        if (DateTime.Parse(current[0]) >= DateTime.Today)
                         {
                             toolStripStatusLabel2.Text = current[0];
                             string[] work_time = current[1].Split(':');
