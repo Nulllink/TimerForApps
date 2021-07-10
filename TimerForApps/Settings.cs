@@ -34,11 +34,21 @@ namespace TimerForApps
 
             if (!File.Exists("Settings.txt"))
             {
-                string[] new_settings = { "auto_new_day=True"};
-                File.WriteAllLines("Settings.txt",new_settings);
+                update_settings();
             }
             string[] settings = File.ReadAllLines("Settings.txt");
+            if (settings.Length != 2)
+            {
+                update_settings();
+            }
             checkBox2.Checked = Convert.ToBoolean(settings[0].Split('=')[1]);
+            checkBox3.Checked = Convert.ToBoolean(settings[1].Split('=')[1]);
+        }
+
+        private void update_settings()
+        {
+            string[] new_settings = { "auto_new_day=True","continue_in_1_day=True"};
+            File.WriteAllLines("Settings.txt",new_settings);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -88,12 +98,21 @@ namespace TimerForApps
         {
             List<bool> states = new List<bool>();
             states.Add(checkBox2.Checked);
+            states.Add(checkBox3.Checked);
             return states;
         }
 
         private void closeWindowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            string[] strings = File.ReadAllLines("Settings.txt");
+            string[] line = strings[1].Split('=');
+            strings[1] = $"{line[0]}={checkBox3.Checked}";
+            File.WriteAllLines("Settings.txt",strings);
         }
     }
 }

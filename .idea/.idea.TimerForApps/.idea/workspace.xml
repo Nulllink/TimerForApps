@@ -31,8 +31,6 @@
       <change beforePath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.csprojAssemblyReference.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.pdb" afterDir="false" />
     </list>
@@ -45,14 +43,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D1EB443-9232-48B1-8289-94AABE8AE823/02/b2b4892b/DateTimeParse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6E5D7AF-0584-4410-B9D6-150F600A0027/aa/5c4fa643/Control.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D1EB443-9232-48B1-8289-94AABE8AE823/09/241fe363/__Error.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/TimerForApps/Infobox.cs" />
-      <option value="$PROJECT_DIR$/TimerForApps/Form1.cs" />
-      <option value="$PROJECT_DIR$/TimerForApps/Settings.cs" />
       <option value="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" />
+      <option value="$PROJECT_DIR$/TimerForApps/Settings.cs" />
+      <option value="$PROJECT_DIR$/TimerForApps/Form1.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m6oZJFLvU1PMcWtJ5kst816tjk" />
@@ -121,6 +121,7 @@
       <workItem from="1625173248759" duration="142000" />
       <workItem from="1625234061798" duration="95000" />
       <workItem from="1625868255370" duration="2953000" />
+      <workItem from="1625907490184" duration="3908000" />
     </task>
     <servers />
   </component>

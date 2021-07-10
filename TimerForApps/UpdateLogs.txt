@@ -90,6 +90,8 @@ Update 11.0 01.07.2021
     Saving logs everyday in auto mod
 Update 11.1 10.07.2021
     Added check box for auto start new day in settings form
+Update 11.2 10.07.2021
+    Added functional for continue already started day
 ====Plans====
 	delete history button and list to check it
 	form of settings
