@@ -81,7 +81,7 @@ namespace TimerForApps
             month = month.Substring(month.Length - 2, 2);
             bool found = false;
             string path = $"TimerLogs/{month}_{DateTime.Today.Year}.txt";
-            try
+            if(File.Exists(path))
             {
                 string[] lines = File.ReadAllLines(path);
                 int found_index = -1;
@@ -125,7 +125,6 @@ namespace TimerForApps
                     File.WriteAllLines(path, lines);
                 }
             }
-            catch{}
             return found;
         }
         
