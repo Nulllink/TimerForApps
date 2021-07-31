@@ -95,6 +95,8 @@ Update 11.2 10.07.2021
 Update 11.3 11.07.2021
     Fixed length of check box 3
     Fixed backup logs in zero timing
+Update 11.4 01.08.2021
+    Fixed bug with starting program in new month
 ====Plans====
 	delete history button and list to check it
 	form of settings

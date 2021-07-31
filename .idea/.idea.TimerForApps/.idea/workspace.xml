@@ -23,9 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0e9ae5c-1bc8-4c59-a972-0ca543435a52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TimerForApps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TimerForApps/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TimerForApps/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Settings.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.pdb" afterDir="false" />
@@ -49,8 +49,8 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/TimerForApps/Infobox.cs" />
       <option value="$PROJECT_DIR$/TimerForApps/Settings.cs" />
-      <option value="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" />
       <option value="$PROJECT_DIR$/TimerForApps/Form1.cs" />
+      <option value="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m6oZJFLvU1PMcWtJ5kst816tjk" />
@@ -121,6 +121,7 @@
       <workItem from="1625868255370" duration="2953000" />
       <workItem from="1625907490184" duration="3908000" />
       <workItem from="1625956048251" duration="183000" />
+      <workItem from="1627765352074" duration="526000" />
     </task>
     <servers />
   </component>

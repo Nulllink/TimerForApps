@@ -79,49 +79,53 @@ namespace TimerForApps
         {
             string month = $"0{DateTime.Today.Month}";
             month = month.Substring(month.Length - 2, 2);
-            string path = $"TimerLogs/{month}_{DateTime.Today.Year}.txt";
-            string[] lines = File.ReadAllLines(path);
             bool found = false;
-            int found_index = -1;
-            for (int i = 0; i < lines.Length; i++)
+            string path = $"TimerLogs/{month}_{DateTime.Today.Year}.txt";
+            try
             {
-                if (!found)
+                string[] lines = File.ReadAllLines(path);
+                int found_index = -1;
+                for (int i = 0; i < lines.Length; i++)
                 {
-                    string[] current = lines[i].Split(new[] {"=="}, StringSplitOptions.None);
-                    if (current.Length == 3)
+                    if (!found)
                     {
-                        if (DateTime.Parse(current[0]) >= DateTime.Today)
+                        string[] current = lines[i].Split(new[] {"=="}, StringSplitOptions.None);
+                        if (current.Length == 3)
                         {
-                            toolStripStatusLabel2.Text = current[0];
-                            string[] work_time = current[1].Split(':');
-                            _h = Int32.Parse(work_time[0]);
-                            _m = Int32.Parse(work_time[1]);
-                            _s = Int32.Parse(work_time[2]);
-                            found = true;
-                            found_index = i;
+                            if (DateTime.Parse(current[0]) >= DateTime.Today)
+                            {
+                                toolStripStatusLabel2.Text = current[0];
+                                string[] work_time = current[1].Split(':');
+                                _h = Int32.Parse(work_time[0]);
+                                _m = Int32.Parse(work_time[1]);
+                                _s = Int32.Parse(work_time[2]);
+                                found = true;
+                                found_index = i;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string[] current = lines[i].Split(new[] {"< >"}, StringSplitOptions.None);
+                        if (current.Length > 1)
+                        {
+                            ListViewItem lvi = new ListViewItem(current[0]); //window name
+                            lvi.SubItems.Add(current[1]); //working time
+                            lvi.ForeColor = Color.Blue; //color
+                            lvi.SubItems.Add(current[2]); //process name
+                            lvi.SubItems.Add(current[3]); //open time
+                            listView1.Items.Add(lvi); //adding item
                         }
                     }
                 }
-                else
+
+                if (found)
                 {
-                    string[] current = lines[i].Split(new[] {"< >"}, StringSplitOptions.None);
-                    if (current.Length > 1)
-                    {
-                        ListViewItem lvi = new ListViewItem(current[0]); //window name
-                        lvi.SubItems.Add(current[1]); //working time
-                        lvi.ForeColor = Color.Blue; //color
-                        lvi.SubItems.Add(current[2]); //process name
-                        lvi.SubItems.Add(current[3]); //open time
-                        listView1.Items.Add(lvi); //adding item
-                    }
+                    Array.Resize(ref lines, found_index);
+                    File.WriteAllLines(path, lines);
                 }
             }
-
-            if (found)
-            {
-                Array.Resize(ref lines, found_index);
-                File.WriteAllLines(path,lines); 
-            }
+            catch{}
             return found;
         }
         
