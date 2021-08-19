@@ -127,34 +127,48 @@ namespace TimerForApps
             }
             return found;
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ListAdd2();
-            for (int i = 0; i < listView1.Items.Count; i++)
+            TimeSpan? timeSpan = TimeSpan.Parse("00:05:00");
+            if (PersonWork.GetInactiveTime() < timeSpan)
             {
-                if (listView1.Items[i].ForeColor == Color.Green)
+                if (toolStripStatusLabel6.Text == @"You are AFK now")
                 {
-                    string[] time = listView1.Items[i].SubItems[1].Text.Split(':');
-                    var hours = Convert.ToInt32(time[0]);
-                    var minutes = Convert.ToInt32(time[1]);
-                    var seconds = Convert.ToInt32(time[2]);
-                    seconds += 10;
-                    if (seconds == 60)
+                    toolStripStatusLabel6.Text = @"You are here";
+                    timer3.Start();
+                }
+                ListAdd2();
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    if (listView1.Items[i].ForeColor == Color.Green)
                     {
-                        seconds = 0;
-                        minutes++;
-                        if (minutes == 60)
+                        string[] time = listView1.Items[i].SubItems[1].Text.Split(':');
+                        var hours = Convert.ToInt32(time[0]);
+                        var minutes = Convert.ToInt32(time[1]);
+                        var seconds = Convert.ToInt32(time[2]);
+                        seconds += 10;
+                        if (seconds == 60)
                         {
-                            minutes = 0;
-                            hours++;
+                            seconds = 0;
+                            minutes++;
+                            if (minutes == 60)
+                            {
+                                minutes = 0;
+                                hours++;
+                            }
                         }
-                    }
 
-                    listView1.Items[i].SubItems[1].Text = $@"{hours}:{minutes}:{seconds}";
+                        listView1.Items[i].SubItems[1].Text = $@"{hours}:{minutes}:{seconds}";
+                    }
                 }
             }
+            else
+            {
+                toolStripStatusLabel6.Text = @"You are AFK now";
+            }
         }
+
         /// <summary>
         /// Making green items in list or add new process
         /// </summary>
@@ -539,7 +553,7 @@ namespace TimerForApps
                 }
             }
             toolStripStatusLabel1.Text = $@"{_h}:{_m}:{_s}";
-            toolStripStatusLabel5.Text = $@"Count: {listView1.Items.Count}";
+            //toolStripStatusLabel5.Text = $@"Count: {listView1.Items.Count}";
 
         }
 

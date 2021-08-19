@@ -54,7 +54,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -199,7 +198,7 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripStatusLabel2, this.toolStripStatusLabel1, this.toolStripStatusLabel4, this.toolStripStatusLabel3, this.toolStripStatusLabel5, this.toolStripStatusLabel6});
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripStatusLabel2, this.toolStripStatusLabel1, this.toolStripStatusLabel4, this.toolStripStatusLabel3, this.toolStripStatusLabel6});
             this.statusStrip1.Location = new System.Drawing.Point(0, 604);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
@@ -231,12 +230,6 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(92, 20);
             this.toolStripStatusLabel3.Text = "Search: False";
             // 
-            // toolStripStatusLabel5
-            // 
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(17, 20);
-            this.toolStripStatusLabel5.Text = "0";
-            // 
             // toolStripStatusLabel6
             // 
             this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
@@ -266,7 +259,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "TimerForApps 11.4";
+            this.Text = "TimerForApps 11.5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -295,7 +288,6 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logsFinderToolStripMenuItem1;

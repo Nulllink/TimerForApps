@@ -97,6 +97,8 @@ Update 11.3 11.07.2021
     Fixed backup logs in zero timing
 Update 11.4 01.08.2021
     Fixed bug with starting program in new month
+Update 11.5 19.08.2021
+    AFK mode created
 ====Plans====
 	delete history button and list to check it
 	form of settings
@@ -105,4 +107,5 @@ Update 11.4 01.08.2021
 	Parents control with time on another apps
 	Change color between different dates
 	Save logs without reboot of computer
-	
+	only read focus window
+	when no mouse movement or keyboard, go afk after 5 minutes

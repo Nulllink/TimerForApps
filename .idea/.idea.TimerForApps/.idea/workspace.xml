@@ -23,7 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0e9ae5c-1bc8-4c59-a972-0ca543435a52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TimerForApps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TimerForApps/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TimerForApps/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TimerForApps/WinFin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/WinFin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/bin/Release/TimerForApps.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TimerForApps/obj/Debug/TimerForApps.exe" afterDir="false" />
@@ -46,6 +50,7 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/TimerForApps/Infobox.cs" />
       <option value="$PROJECT_DIR$/TimerForApps/Settings.cs" />
+      <option value="$PROJECT_DIR$/TimerForApps/WinFin.cs" />
       <option value="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" />
       <option value="$PROJECT_DIR$/TimerForApps/Form1.cs" />
     </changedPaths>
@@ -120,6 +125,9 @@
       <workItem from="1625956048251" duration="183000" />
       <workItem from="1627765352074" duration="526000" />
       <workItem from="1627766548974" duration="83000" />
+      <workItem from="1629313884759" duration="1045000" />
+      <workItem from="1629368024433" duration="3231000" />
+      <workItem from="1629371390348" duration="269000" />
     </task>
     <servers />
   </component>
