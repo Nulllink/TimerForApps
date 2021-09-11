@@ -37,17 +37,19 @@ namespace TimerForApps
                 update_settings();
             }
             string[] settings = File.ReadAllLines("Settings.txt");
-            if (settings.Length != 2)
+            if (settings.Length != 3) //checking on number of rows
             {
                 update_settings();
+                settings = File.ReadAllLines("Settings.txt");
             }
             checkBox2.Checked = Convert.ToBoolean(settings[0].Split('=')[1]);
             checkBox3.Checked = Convert.ToBoolean(settings[1].Split('=')[1]);
+            checkBox4.Checked = Convert.ToBoolean(settings[2].Split('=')[1]);
         }
 
         private void update_settings()
         {
-            string[] new_settings = { "auto_new_day=True","continue_in_1_day=True"};
+            string[] new_settings = { "auto_new_day=True","continue_in_1_day=True","afk_after_5_minutes=False"};
             File.WriteAllLines("Settings.txt",new_settings);
         }
 
@@ -99,6 +101,7 @@ namespace TimerForApps
             List<bool> states = new List<bool>();
             states.Add(checkBox2.Checked);
             states.Add(checkBox3.Checked);
+            states.Add(checkBox4.Checked);
             return states;
         }
 
@@ -112,6 +115,14 @@ namespace TimerForApps
             string[] strings = File.ReadAllLines("Settings.txt");
             string[] line = strings[1].Split('=');
             strings[1] = $"{line[0]}={checkBox3.Checked}";
+            File.WriteAllLines("Settings.txt",strings);
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            string[] strings = File.ReadAllLines("Settings.txt");
+            string[] line = strings[2].Split('=');
+            strings[2] = $"{line[0]}={checkBox4.Checked}";
             File.WriteAllLines("Settings.txt",strings);
         }
     }

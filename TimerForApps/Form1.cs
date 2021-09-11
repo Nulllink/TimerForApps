@@ -131,7 +131,7 @@ namespace TimerForApps
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan? timeSpan = TimeSpan.Parse("00:05:00");
-            if (PersonWork.GetInactiveTime() < timeSpan)
+            if (PersonWork.GetInactiveTime() < timeSpan || !sBools[2])
             {
                 if (toolStripStatusLabel6.Text == @"You are AFK now")
                 {

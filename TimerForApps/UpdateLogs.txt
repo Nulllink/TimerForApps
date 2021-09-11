@@ -99,6 +99,8 @@ Update 11.4 01.08.2021
     Fixed bug with starting program in new month
 Update 11.5 19.08.2021
     AFK mode created
+Update 11.6 11.09.2021
+    AFK mode control in settings
 ====Plans====
 	delete history button and list to check it
 	form of settings
