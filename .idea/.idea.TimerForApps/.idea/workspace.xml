@@ -32,6 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8F9A7EA3-47A4-4FFD-AD6C-91B550598CCD/8b/29e2e6f6/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D1EB443-9232-48B1-8289-94AABE8AE823/02/b2b4892b/DateTimeParse.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6E5D7AF-0584-4410-B9D6-150F600A0027/aa/5c4fa643/Control.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D1EB443-9232-48B1-8289-94AABE8AE823/09/241fe363/__Error.cs" root0="SKIP_HIGHLIGHTING" />
@@ -41,8 +42,9 @@
       <option value="$PROJECT_DIR$/TimerForApps/Infobox.cs" />
       <option value="$PROJECT_DIR$/TimerForApps/WinFin.cs" />
       <option value="$PROJECT_DIR$/TimerForApps/Settings.cs" />
-      <option value="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" />
       <option value="$PROJECT_DIR$/TimerForApps/Form1.cs" />
+      <option value="$PROJECT_DIR$/TimerForApps/Graph.cs" />
+      <option value="$PROJECT_DIR$/TimerForApps/UpdateLogs.txt" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1m6oZJFLvU1PMcWtJ5kst816tjk" />
@@ -51,7 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3503801" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -120,6 +122,8 @@
       <workItem from="1629371390348" duration="269000" />
       <workItem from="1631352742270" duration="1248000" />
       <workItem from="1631354063809" duration="128000" />
+      <workItem from="1632896939416" duration="6213000" />
+      <workItem from="1632916864738" duration="107000" />
     </task>
     <servers />
   </component>

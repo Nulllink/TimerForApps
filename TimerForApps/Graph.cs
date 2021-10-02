@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Globalization;
 
 namespace TimerForApps
 {
     public partial class Graph : Form
     {
         LogsFinder lgf;
+        //private int count = 0;//for count days
         public Graph(LogsFinder lgf1)
         {
             InitializeComponent();
@@ -39,17 +41,57 @@ namespace TimerForApps
             }
             
         }
+
+        private int last_week = 0;
         public void draw(int y, string date)
         {
-            int li = chart1.Series.Count - 1;
-            date = date.Replace('_', '.');
+            int li = chart1.Series.Count - 1; // index of series
+            date = date.Replace('_', '.');//replace _ with . in date
             DateTime dt = DateTime.Parse(date);
-           
             int x = dt.DayOfYear;
-            chart1.Series[li].Points.AddXY(x,y/60);
+            chart1.Series[li].Points.AddXY(x,y/60.0);//fixed problem with int value
             //chart1.Series[li].Points[chart1.Series[li].Points.Count - 1].AxisLabel = "date";
             //chart1.Series[li].AxisLabel.la
-            chart1.Series[li].Points[chart1.Series[li].Points.Count - 1].Label = date;
+            //int week = (x-Delta_monday_of_new_year(dt.Year)) / 7;
+            Calendar cal = new CultureInfo("en-US").Calendar;
+            int week = cal.GetWeekOfYear(dt, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+            if (last_week < week)
+            {
+                last_week = week;
+                chart1.Series[li].Points[chart1.Series[li].Points.Count - 1].Label = date;
+            }
+            
+        }
+
+        private int Delta_monday_of_new_year(int year)
+        {
+            int delta=4;
+            DateTime dt = new DateTime(year,1,1);
+            if (dt.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                delta = 5;
+            }
+            else if(dt.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                delta = 6;
+            }
+            else if(dt.DayOfWeek == DayOfWeek.Thursday)
+            {
+                delta = 7;
+            }
+            else if(dt.DayOfWeek == DayOfWeek.Friday)
+            {
+                delta = 8;
+            }
+            else if(dt.DayOfWeek == DayOfWeek.Saturday)
+            {
+                delta = 9;
+            }
+            else if(dt.DayOfWeek == DayOfWeek.Sunday)
+            {
+                delta = 10;
+            }
+            return delta;
         }
 
         private void Graph_FormClosed(object sender, FormClosedEventArgs e)
