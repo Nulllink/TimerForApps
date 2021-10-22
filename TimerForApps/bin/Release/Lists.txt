@@ -1,3 +1,38 @@
 ====WhiteList====
+Forza Horizon 4
+YouTube
+Watch cartoons online
+Twitch
+Messenger
+Notepad++
+‎- Microsoft Edge
+фильм
+Microsoft Teams
+LeagueOfGraphs
+Игра престолов
+Gogoanime
+cмотреть
+Watch
 ====BlackList====
+Microsoft Edge
+Microsoft Store
+Музыка Groove
+Microsoft Text Input Application
+Параметры
+ESET Desktop view
+Кино и ТВ
+Будильники и часы
+Входящие — Outlook ‎- Почта
+Почта
+Mail
+Входящие — Outlook ‎- Mail
+Компаньон консоли Xbox
+Calendar
+Калькулятор
+Calculator
+OMEN Audio Control
+Snip & Sketch
+NVIDIA GeForce Overlay
+Movies & TV
+Inbox - Outlook ‎- Mail
 ====ControlList====

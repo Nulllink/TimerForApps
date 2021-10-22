@@ -130,6 +130,7 @@ namespace TimerForApps
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             TimeSpan? timeSpan = TimeSpan.Parse("00:05:00");
             if (PersonWork.GetInactiveTime() < timeSpan || !sBools[2])
             {
@@ -531,9 +532,14 @@ namespace TimerForApps
             }
         }
 
+        private bool started = false;
         private void timer2_Tick(object sender, EventArgs e)
         {
-            
+            if (!started)
+            {
+                WindowState = FormWindowState.Minimized;
+                started = true;
+            }
             if (DateTime.Today > DateTime.Parse(toolStripStatusLabel2.Text) && sBools[0])
             {
                 Saving();
@@ -553,6 +559,7 @@ namespace TimerForApps
                 }
             }
             toolStripStatusLabel1.Text = $@"{_h}:{_m}:{_s}";
+            
             //toolStripStatusLabel5.Text = $@"Count: {listView1.Items.Count}";
 
         }

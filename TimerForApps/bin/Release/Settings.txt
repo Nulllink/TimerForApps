@@ -1,2 +1,3 @@
 auto_new_day=True
 continue_in_1_day=True
+afk_after_5_minutes=False
