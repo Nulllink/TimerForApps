@@ -102,8 +102,8 @@ namespace TimerForApps
                             }
                             else
                             {
-                                int ind = application.WindowTitle.IndexOf(line);
-                                if (ind > -1)
+                                bool ind = application.WindowTitle.Contains(line);
+                                if (ind)
                                 {
                                     application.ProcessName = line.Replace(" ", "");
                                     application.WindowTitle = line;
