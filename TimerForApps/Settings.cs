@@ -99,9 +99,9 @@ namespace TimerForApps
         public List<bool> Check_boxes_states()
         {
             List<bool> states = new List<bool>();
-            states.Add(checkBox2.Checked);
-            states.Add(checkBox3.Checked);
-            states.Add(checkBox4.Checked);
+            states.Add(checkBox2.Checked);//new day
+            states.Add(checkBox3.Checked);//count continue
+            states.Add(checkBox4.Checked);//AFK mode
             return states;
         }
 

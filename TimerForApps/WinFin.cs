@@ -85,9 +85,9 @@ namespace TimerForApps
             foreach (var application in applications)
             {
                 bool black = false; //process in black list or not
-                int whichList = 0; //in which list lays current app
+                int whichList = 0; //in which list lies current app
                 //if file exist
-                if (file == true)
+                if (file)
                 {
                     StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\Lists.txt");
                     string line;
@@ -127,12 +127,12 @@ namespace TimerForApps
                         {
                             if (line == application.WindowTitle)
                             {
-                                //MessageBox.Show("Are you shure about this?");
+                                //MessageBox.Show("Are you sure about this?");
                                 if (!infopen)
                                 {
                                     Infobox info = new Infobox();
                                     infopen = true;
-                                    info.write("Are you shure about this?");
+                                    info.write("Are you sure about this?");
                                     info.Show();
                                 }
                                 break;
@@ -153,10 +153,11 @@ namespace TimerForApps
 
     public class ProcessWindow
     {
-        public string WindowTitle { get; set; }
+        public string WindowTitle;
+        
         public Process Process { get; private set; }
 
-        public string ProcessName { get; set; }
+        public string ProcessName;
         public ProcessWindow(string windowTitle, Process process)
         {
             WindowTitle = windowTitle;

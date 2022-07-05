@@ -27,16 +27,16 @@ namespace TimerForApps
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            sBools = fSettings.Check_boxes_states();
+            sBools = fSettings.Check_boxes_states();//get settings
             Starting();
         }
 
         private void Starting()
         {
             listView1.Items.Clear();
-            _s = 0;
-            _m = 0;
-            _h = 0;
+            _s = 0;//seconds
+            _m = 0;//minutes
+            _h = 0;//hours
             //Checking file Lists.txt
             try
             {
@@ -181,6 +181,7 @@ namespace TimerForApps
                 listView1.Items[i].ForeColor = Color.Blue;
             }
             List<ProcessWindow> pw = winproc.ProcessFind(_file);
+
             //processing list of processes
             foreach (ProcessWindow text in pw)
             {
@@ -210,8 +211,8 @@ namespace TimerForApps
             }
         }
 
-        //ListAdd
-        #region
+        
+        #region ListAdd
         //private void ListAdd()
         //{
         //    for (int i = 0; i < listView1.Items.Count; i++)

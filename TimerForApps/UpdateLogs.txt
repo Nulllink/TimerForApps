@@ -112,6 +112,5 @@ Update 11.8 22.10.2021
 	comment all functions
 	Parents control with time on another apps
 	Change color between different dates
-	Save logs without reboot of computer
 	only read focus window
 	when no mouse movement or keyboard, go afk after 5 minutes
