@@ -54,7 +54,7 @@ namespace TimerForApps
             string path = "";
             if (comboBox2.Text == "")
             {
-                path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{Program.config["pc_name"]}";
+                path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{_f1P.config["pc_name"]}";
             }
             else
             {

@@ -18,6 +18,7 @@ namespace TimerForApps
         private bool _search = false;
         Settings fSettings = new Settings();
         List<bool> sBools;
+        public Dictionary<string, string> config = new Dictionary<string, string>();
         #endregion
 
         public Form1()
@@ -37,7 +38,7 @@ namespace TimerForApps
             _s = 0;//seconds
             _m = 0;//minutes
             _h = 0;//hours
-            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{Program.config["pc_name"]}");
+            
             //Checking file Lists.txt
             try
             {
@@ -63,6 +64,13 @@ namespace TimerForApps
                 sw.WriteLine("====ControlList====");
                 sw.Close();
             }
+            string[] conf = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\Config.txt");
+            foreach (var item in conf)
+            {
+                string[] vals = item.Split('=');
+                config.Add(vals[0], vals[1]);
+            }
+            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{config["pc_name"]}");
             bool found =false;
             if (sBools[1])
             {
@@ -81,7 +89,7 @@ namespace TimerForApps
             string month = $"0{DateTime.Today.Month}";
             month = month.Substring(month.Length - 2, 2);
             bool found = false;
-            string path = $"TimerLogs/{Program.config["pc_name"]}/{DateTime.Today.Year}_{month}.txt"; //fix
+            string path = $"TimerLogs/{config["pc_name"]}/{DateTime.Today.Year}_{month}.txt"; //fix
             if(File.Exists(path))
             {
                 string[] lines = File.ReadAllLines(path);
@@ -332,7 +340,7 @@ namespace TimerForApps
                     string date = toolStripStatusLabel2.Text; //DateTime.Now.ToString().Replace('.', '_');
 
                     //date = date.Replace(':', '#');
-                    string path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs\\{Program.config["pc_name"]}\\{date.Substring(6, 4)}_{date.Substring(3, 2)}.txt"; //fix
+                    string path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs\\{config["pc_name"]}\\{date.Substring(6, 4)}_{date.Substring(3, 2)}.txt"; //fix
                      
                     StreamWriter sw = new StreamWriter(path, true);
                     sw.WriteLine($"{date}=={toolStripStatusLabel1.Text}==Windows total count {listView1.Items.Count} {this.Text}");
