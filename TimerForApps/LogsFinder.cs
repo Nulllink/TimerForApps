@@ -51,7 +51,7 @@ namespace TimerForApps
         {
             
             List<string> files = new List<string>();
-            string path = AppDomain.CurrentDomain.BaseDirectory + "TimerLogs";
+            string path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{Program.config["pc_name"]}";
             string name = comboBox1.Text.Replace(" ", "").ToLower();
             int allhours = 0;
             int allminutes = 0;
@@ -63,7 +63,7 @@ namespace TimerForApps
                 //DateTime dateps = dateTimePicker1.Value;
                 //DateTime datepf = dateTimePicker2.Value;
                 
-                DateTime datec = DateTime.ParseExact(date, "MM_yyyy", null);
+                DateTime datec = DateTime.ParseExact(date, "yyyy_MM", null);
                 var dateci = datec.Year * 100 + datec.Month;
                 var dateps = dateTimePicker1.Value.Year * 100 + dateTimePicker1.Value.Month;
                 var datepf = dateTimePicker2.Value.Year * 100 + dateTimePicker2.Value.Month;
@@ -74,7 +74,7 @@ namespace TimerForApps
                     bool fileadd = true;
                     for (int i=0;i<files.Count;i++) {
                         string datesf = files[i].Substring(files[i].LastIndexOf('\\')+1,7);
-                        DateTime datef = DateTime.ParseExact(datesf, "MM_yyyy", null);
+                        DateTime datef = DateTime.ParseExact(datesf, "yyyy_MM", null);
                         var dateif = datef.Year * 100 + datef.Month;
                         if (dateci < dateif)
                         {
