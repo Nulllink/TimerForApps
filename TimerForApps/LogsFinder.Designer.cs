@@ -45,6 +45,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,14 +99,13 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(0, 85);
+            this.listView1.Location = new System.Drawing.Point(0, 111);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(479, 472);
-            this.listView1.TabIndex = 2;
+            this.listView1.Size = new System.Drawing.Size(479, 451);
+            this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
@@ -145,15 +145,14 @@
             this.comboBox1.Location = new System.Drawing.Point(0, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(479, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox1.TabIndex = 1;
             this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "yyyy_MM";
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 45);
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 69);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(479, 20);
             this.dateTimePicker1.TabIndex = 3;
@@ -162,9 +161,8 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "yyyy_MM";
-            this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Top;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(0, 65);
+            this.dateTimePicker2.Location = new System.Drawing.Point(0, 90);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(479, 20);
             this.dateTimePicker2.TabIndex = 4;
@@ -186,11 +184,21 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(71, 17);
             this.toolStripStatusLabel1.Text = "Open Time: ";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(0, 46);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(479, 21);
+            this.comboBox2.TabIndex = 2;
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
+            // 
             // LogsFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 579);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -221,6 +229,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ToolStripMenuItem findProcessToolStripMenuItem;
@@ -229,5 +238,6 @@
         private System.Windows.Forms.ToolStripMenuItem addAsSeriesToGraphToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        
     }
 }

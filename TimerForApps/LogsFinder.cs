@@ -51,7 +51,15 @@ namespace TimerForApps
         {
             
             List<string> files = new List<string>();
-            string path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{Program.config["pc_name"]}";
+            string path = "";
+            if (comboBox2.Text == "")
+            {
+                path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{Program.config["pc_name"]}";
+            }
+            else
+            {
+                path = AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{comboBox2.Text}";
+            }
             string name = comboBox1.Text.Replace(" ", "").ToLower();
             int allhours = 0;
             int allminutes = 0;
@@ -339,6 +347,21 @@ namespace TimerForApps
                             y += Convert.ToInt32(listView1.Items[i].SubItems[1].Text) * 60 + Convert.ToInt32(listView1.Items[i].SubItems[2].Text);
                         }
                     }
+                }
+            }
+        }
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            IEnumerable<string> dir_names = Directory.EnumerateDirectories(AppDomain.CurrentDomain.BaseDirectory + "\\TimerLogs");
+            foreach (string dir_name in dir_names)
+            {
+                string[] blocks = dir_name.Split('\\');
+                comboBox2.Items.Add(blocks[blocks.Length-1]);
+                if (comboBox2.Items.Count > 30)
+                {
+                    break;
                 }
             }
         }
