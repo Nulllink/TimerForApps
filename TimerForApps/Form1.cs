@@ -29,6 +29,12 @@ namespace TimerForApps
         private void Form1_Load(object sender, EventArgs e)
         {
             sBools = fSettings.Check_boxes_states();//get settings
+            string[] conf = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\Config.txt");
+            foreach (var item in conf)
+            {
+                string[] vals = item.Split('=');
+                config.Add(vals[0], vals[1]);
+            }
             Starting();
         }
 
@@ -63,12 +69,6 @@ namespace TimerForApps
                 sw.WriteLine("====BlackList====");
                 sw.WriteLine("====ControlList====");
                 sw.Close();
-            }
-            string[] conf = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "\\Config.txt");
-            foreach (var item in conf)
-            {
-                string[] vals = item.Split('=');
-                config.Add(vals[0], vals[1]);
             }
             Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + $"TimerLogs/{config["pc_name"]}");
             bool found =false;
