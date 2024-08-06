@@ -119,18 +119,50 @@ namespace TimerForApps
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    if (name != "self")
+                    if (line != "")
                     {
-                        var spline = line.Split(new[] { "< >" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (spline.Length > 2)
+                        if (name != "self")
                         {
-
-                            if (Branch(name, spline))
+                            var spline = line.Split(new[] { "< >" }, StringSplitOptions.RemoveEmptyEntries);
+                            if (spline.Length > 2)
                             {
-                                var trname = spline[0];
-                                string[] splittime = spline[1].Split(':');
-                                var hours = Convert.ToInt32(splittime[0]);
-                                var minutes = Convert.ToInt32(splittime[1]);
+
+                                if (Branch(name, spline))
+                                {
+                                    var trname = spline[0];
+                                    string[] splittime = spline[1].Split(':');
+                                    var hours = Convert.ToInt32(splittime[0]);
+                                    var minutes = Convert.ToInt32(splittime[1]);
+                                    allhours += hours;
+                                    allminutes += minutes;
+                                    if (allminutes >= 60)
+                                    {
+                                        allminutes -= 60;
+                                        allhours++;
+                                    }
+                                    ListViewItem lvi = new ListViewItem(trname);
+                                    lvi.SubItems.Add(hours.ToString());
+                                    lvi.SubItems.Add(minutes.ToString());
+                                    lvi.SubItems.Add(date);
+                                    lvi.SubItems.Add(spline[2]);
+                                    listView1.Items.Add(lvi);
+                                }
+
+                            }
+                            else
+                            {
+                                date = spline[0].Substring(0, 10);
+                            }
+                        }
+                        else
+                        {
+                            string[] spline = line.Split(new[] { "==" }, StringSplitOptions.RemoveEmptyEntries);
+                            if (spline.Length > 1)
+                            {
+                                date = spline[0];
+                                string[] sptime = spline[1].Split(':');
+                                var hours = Convert.ToInt32(sptime[0]);
+                                var minutes = Convert.ToInt32(sptime[1]);
                                 allhours += hours;
                                 allminutes += minutes;
                                 if (allminutes >= 60)
@@ -138,41 +170,12 @@ namespace TimerForApps
                                     allminutes -= 60;
                                     allhours++;
                                 }
-                                ListViewItem lvi = new ListViewItem(trname);
+                                ListViewItem lvi = new ListViewItem("Self");
                                 lvi.SubItems.Add(hours.ToString());
                                 lvi.SubItems.Add(minutes.ToString());
                                 lvi.SubItems.Add(date);
-                                lvi.SubItems.Add(spline[2]);
                                 listView1.Items.Add(lvi);
                             }
-
-                        }
-                        else
-                        {
-                            date = spline[0].Substring(0, 10);
-                        }
-                    }
-                    else
-                    {
-                        string[] spline = line.Split(new[] { "==" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (spline.Length > 1)
-                        {
-                            date = spline[0];
-                            string[] sptime = spline[1].Split(':');
-                            var hours = Convert.ToInt32(sptime[0]);
-                            var minutes = Convert.ToInt32(sptime[1]);
-                            allhours += hours;
-                            allminutes += minutes;
-                            if (allminutes >= 60)
-                            {
-                                allminutes -= 60;
-                                allhours++;
-                            }
-                            ListViewItem lvi = new ListViewItem("Self");
-                            lvi.SubItems.Add(hours.ToString());
-                            lvi.SubItems.Add(minutes.ToString());
-                            lvi.SubItems.Add(date);
-                            listView1.Items.Add(lvi);
                         }
                     }
                 }
