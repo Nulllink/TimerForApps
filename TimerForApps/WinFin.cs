@@ -125,14 +125,16 @@ namespace TimerForApps
                         }
                         else if (whichList == 2)
                         {
-                            if (line == application.WindowTitle)
+                            bool ind = application.WindowTitle.Contains(line);
+                            if (ind)
                             {
                                 //MessageBox.Show("Are you sure about this?");
                                 if (!infopen)
                                 {
+                                    application.Process.Kill();
                                     Infobox info = new Infobox();
                                     infopen = true;
-                                    info.write("Are you sure about this?");
+                                    info.write("Sorry, I closed it XD");
                                     info.Show();
                                 }
                                 break;
