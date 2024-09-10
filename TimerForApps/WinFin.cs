@@ -128,10 +128,10 @@ namespace TimerForApps
                             bool ind = application.WindowTitle.Contains(line);
                             if (ind)
                             {
+                                application.Process.Kill();
                                 //MessageBox.Show("Are you sure about this?");
                                 if (!infopen)
                                 {
-                                    application.Process.Kill();
                                     Infobox info = new Infobox();
                                     infopen = true;
                                     info.write("Sorry, I closed it XD");
